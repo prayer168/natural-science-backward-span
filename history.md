@@ -19,3 +19,8 @@
 
 - 新增自然倒背挑戰網站使用手冊，提供 HTML、PDF、DOCX 三種格式。
 - 說明四種挑戰模式、課程篩選、播放控制、練習／挑戰模式、投影與無障礙操作、題庫限制及教師建議。
+
+## Repository publication — 2026-10-10
+
+- Initial commit `59533b7` pushed to `https://github.com/prayer168/natural-science-backward-span` on `main`.
+- GitHub Pages is not enabled yet.
