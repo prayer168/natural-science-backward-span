@@ -49,3 +49,4 @@ body.projector .topbar{display:flex!important;min-height:64px;height:auto;paddin
 .card-choice .card-caption{font-size:14px}
 @media(max-width:760px){.sequence-token.card-token{width:calc(50% - 8px);max-width:calc(50% - 8px);min-height:128px;padding:8px}.card-token img{width:min(100%,100px);height:68px}.card-caption{font-size:13px}.choice-button.card-choice{width:calc(50% - 8px);min-width:0;max-width:none;min-height:120px;padding:8px}.card-choice img{max-width:92px;height:62px}.card-choice .card-caption{font-size:13px}}
 @media(max-width:390px){.sequence-token.card-token{min-height:116px;gap:5px}.card-token img{height:60px}.card-caption,.card-choice .card-caption{font-size:12px}.choice-button.card-choice{min-height:110px;gap:5px}.card-choice img{height:56px}}
+.brand-mark{width:48px;height:48px;object-fit:contain;display:block;border-radius:0;background:transparent;color:inherit;font-size:initial}
