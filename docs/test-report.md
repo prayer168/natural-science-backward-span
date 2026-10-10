@@ -29,3 +29,12 @@
 - 自然題庫目前共 20 組，涵蓋三、四、六年級以及五年級大地主題；五年級題組仍待擴充。
 - 每個課程題組最多 6 個內容詞語，因此圖卡／詞語模式雖保留 12 上限控制，現有來源題組的實際長度仍由題組項目數限制。
 - 影片正式錄製檔需拍攝時另外存入 `video-assets/recordings/`；截圖不能替代正式錄影。
+
+## 2026-10-10｜Facebook 分享頁與 GitHub Pages 0.2.2
+
+- `share/facebook-post.html`：中英文貼文、中文／英文／全文複製按鈕，含 Open Graph 與 Twitter Card metadata。
+- `assets/images/og-cover.png`：1200×630 PNG，255,270 bytes。
+- GitHub Pages：`https://prayer168.github.io/natural-science-backward-span/`。
+- 公開首頁、分享頁及縮圖：HTTP 200。
+- Playwright HTTPS 檢查：縮圖載入 1200×630；中、英、全文剪貼簿文字可讀回且有分隔符；無瀏覽器 page error。
+- 分享頁手機寬度 390px 無水平溢出；桌機與手機畫面保存在專案根目錄 `video-assets/screenshots/`，不納入網站 Repo。

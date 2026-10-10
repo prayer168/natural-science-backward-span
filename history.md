@@ -1,4 +1,4 @@
-# 建置歷程
+﻿# 建置歷程
 
 ## 0.2.0 — 2026-10-10
 
@@ -29,4 +29,7 @@
 
 - 新增中英文 Facebook 貼文與中英文單篇／全文一鍵複製頁 `share/facebook-post.html`。
 - 新增 1200×630 社群預覽縮圖，並加入首頁、手冊與分享頁的 Open Graph／Twitter Card metadata。
-- 準備啟用 GitHub Pages，分享頁使用正式公開網址。
+- 啟用 GitHub Pages，分享頁使用正式公開網址 `https://prayer168.github.io/natural-science-backward-span/share/facebook-post.html`。
+
+- GitHub Pages 已部署；首頁、分享頁及 PNG 縮圖回應 HTTP 200。
+- HTTPS 瀏覽器驗證中英文及全文剪貼簿複製，縮圖原尺寸 1200×630。
