@@ -9,7 +9,7 @@
     slots: $("answer-slots"), bank: $("choice-bank"), undo: $("undo-button"), clear: $("clear-button"), submit: $("submit-button"),
     digitAnswerField: $("digit-answer-field"), digitAnswer: $("digit-answer"), answerHint: $("answer-hint"), pause: $("pause-button"), resultIcon: $("result-icon"), resultHeading: $("result-heading"),
     resultCopy: $("result-copy"), answerReveal: $("answer-reveal"), replay: $("replay-button"), next: $("next-button"), restart: $("restart-button"),
-    source: $("source-label"), announcer: $("announcer"), sound: $("sound-toggle"), focus: $("focus-toggle"), dialog: $("help-dialog"),
+    source: $("source-label"), announcer: $("announcer"), sound: $("sound-toggle"), focus: $("focus-toggle"), fullscreen: $("fullscreen-toggle"), dialog: $("help-dialog"),
     help: $("teacher-help"), closeHelp: $("close-help"), doneHelp: $("done-help")
   };
 
@@ -28,6 +28,19 @@
     const grade=els.grade.value, publisher=els.publisher.value, unit=els.unit.value;
     return window.SCIENCE_SETS.filter(set=>(grade==="all"||String(set.grade)===grade)&&(publisher==="all"||set.publisher===publisher)&&(unit==="all"||set.id===unit));
   }
+  function syncLengthBounds() {
+    const quick=document.querySelector(".quick-lengths");
+    if(state.mode==="digits") { els.length.min="6"; els.length.max="12"; if(quick)quick.hidden=false; }
+    else if(state.mode==="custom") { els.length.min="3"; els.length.max="12"; if(quick)quick.hidden=true; }
+    else {
+      const sets=currentSets(); const counts=sets.map(set=>set.items.length); const low=counts.length?Math.min(...counts):2; const high=counts.length?Math.max(...counts):2;
+      els.length.min=String(low); els.length.max=String(high); if(quick)quick.hidden=true;
+    }
+    const value=Math.max(Number(els.length.min),Math.min(Number(els.length.max),Number(els.length.value)));
+    els.length.value=String(value); const ends=els.length.parentElement.querySelectorAll(".range-ends span");
+    if(ends.length){ends[0].textContent=`${els.length.min} 個`;ends[1].textContent=`${els.length.max} 個`;}
+    updateLength();
+  }
   function fillUnits() {
     const before=els.unit.value; const grade=els.grade.value, publisher=els.publisher.value;
     const sets=window.SCIENCE_SETS.filter(set=>(grade==="all"||String(set.grade)===grade)&&(publisher==="all"||set.publisher===publisher));
@@ -36,6 +49,7 @@
     sets.forEach(set=>{ if(!groups.has(set.topic)) groups.set(set.topic,[]); groups.get(set.topic).push(set); });
     groups.forEach((entries,topic)=>{ const group=document.createElement("optgroup"); group.label=topic; entries.forEach(set=>{const option=new Option(`${set.grade}年級・${set.term}・${set.publisher}｜${set.unit}`,set.id);group.append(option);});els.unit.append(group); });
     if([...els.unit.options].some(option=>option.value===before))els.unit.value=before;
+    if(state.mode==="cards"||state.mode==="words")syncLengthBounds();
   }
   function setMode(mode) {
     if(state.phase!=="idle"&&state.phase!=="result") resetGame();
@@ -43,8 +57,7 @@
     els.modeCards.forEach(card=>{const selected=card.dataset.mode===mode;card.classList.toggle("is-selected",selected);card.setAttribute("aria-pressed",String(selected));});
     const science=mode==="cards"||mode==="words";
     els.scienceFilters.hidden=!science; els.unitField.hidden=!science; els.lengthControl.hidden=mode==="custom"; els.customField.hidden=mode!=="custom";
-    els.length.min=mode==="digits"?6:3; els.length.value=mode==="digits"?Math.max(6,Number(els.length.value)):Math.max(3,Math.min(12,Number(els.length.value)));
-    updateLength();
+    syncLengthBounds();
     els.source.textContent=modeLabel(mode);
   }
   function modeLabel(mode=state.mode) { return ({digits:"今日任務：數字倒背",cards:"今日任務：自然圖卡倒序",words:"今日任務：自然詞語倒背",custom:"今日任務：教師自訂題組"})[mode]; }
@@ -68,8 +81,9 @@
     if(state.mode==="custom")return customSequence();
     const sets=currentSets();
     if(!sets.length)return {error:"目前沒有符合條件的題組，請調整年級或版本。"};
-    const choices=sets.length>1?sets.filter(item=>item.id!==state.lastSet?.id):sets;const set=choices[Math.floor(Math.random()*choices.length)]; state.lastSet=set;
-    const count=Math.min(Number(els.length.value),set.items.length);
+    const count=Number(els.length.value); const eligible=sets.filter(item=>item.items.length>=count);
+    if(!eligible.length)return {error:"這個篩選條件沒有足夠活動數的單元，請縮短序列或更換單元。"};
+    const choices=eligible.length>1?eligible.filter(item=>item.id!==state.lastSet?.id):eligible;const set=choices[Math.floor(Math.random()*choices.length)]; state.lastSet=set;
     return {items:shuffle(set.items).slice(0,count).map(item=>({...item})),label:state.mode==="cards"?"自然圖卡倒序":"自然詞語倒背",source:`${set.grade}年級・${set.term}・${set.publisher}｜${set.unit}`};
   }
   function makeToken(item,index,mode=state.mode) {
@@ -152,6 +166,7 @@
 
   els.modeCards.forEach(card=>card.addEventListener("click",()=>setMode(card.dataset.mode)));
   [els.grade,els.publisher].forEach(select=>select.addEventListener("change",fillUnits));
+  els.unit.addEventListener("change",()=>{if(state.mode==="cards"||state.mode==="words")syncLengthBounds();});
   els.length.addEventListener("input",updateLength);document.querySelectorAll("[data-length]").forEach(button=>button.addEventListener("click",()=>{els.length.value=button.dataset.length;updateLength();}));
   els.start.addEventListener("click",()=>{if(state.phase==="sequence")togglePause();else startGame();});els.pause.addEventListener("click",togglePause);
   els.submit.addEventListener("click",submitAnswer);els.digitAnswer.addEventListener("keydown",event=>{if(event.key==="Enter"){event.preventDefault();submitAnswer();}});
@@ -159,6 +174,8 @@
   els.help.addEventListener("click",openHelp);els.closeHelp.addEventListener("click",closeHelp);els.doneHelp.addEventListener("click",closeHelp);els.dialog.addEventListener("click",event=>{if(event.target===els.dialog)closeHelp();});
   els.sound.addEventListener("click",()=>{state.sound=!state.sound;els.sound.setAttribute("aria-pressed",String(state.sound));els.sound.textContent=`音效：${state.sound?"開":"關"}`;if(state.sound)beep();});
   els.focus.addEventListener("click",()=>{const enabled=document.body.classList.toggle("projector");els.focus.setAttribute("aria-pressed",String(enabled));els.focus.textContent=enabled?"離開投影":"大字投影";});
+  els.fullscreen.addEventListener("click",async()=>{try{if(document.fullscreenElement)await document.exitFullscreen();else await document.documentElement.requestFullscreen();}catch{announce("此瀏覽器無法進入全螢幕，請使用瀏覽器的全螢幕功能。");}});
+  document.addEventListener("fullscreenchange",()=>{const active=Boolean(document.fullscreenElement);els.fullscreen.setAttribute("aria-pressed",String(active));els.fullscreen.textContent=active?"離開全螢幕":"全螢幕";announce(active?"已進入全螢幕。":"已離開全螢幕。");});
   els.playMode.addEventListener("change",()=>{state.roundsTotal=els.playMode.value==="challenge"?5:1;});
   window.addEventListener("beforeunload",clearTimer);
   fillUnits();updateLength();renderIdle();

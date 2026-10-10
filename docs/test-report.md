@@ -38,3 +38,11 @@
 - 公開首頁、分享頁及縮圖：HTTP 200。
 - Playwright HTTPS 檢查：縮圖載入 1200×630；中、英、全文剪貼簿文字可讀回且有分隔符；無瀏覽器 page error。
 - 分享頁手機寬度 390px 無水平溢出；桌機與手機畫面保存在專案根目錄 `video-assets/screenshots/`，不納入網站 Repo。
+
+## 2026-10-10｜版本 0.3.0 課程補齊與響應式版面
+
+- 課程資料 93 組，涵蓋三至六年級康軒／翰林／南一各版本和學期；活動總數 279，逐組與課程地圖原文對照。
+- Chromium 桌機檢視確認資料量、標題字級與自然題型播放；三年級植物單元以三個來源活動形成倒序項目。
+- 768px 平板、390px 手機版面均無水平溢出；自然模式顯示依單元調整的長度範圍，數字快速選項隱藏。
+- 全螢幕切換可進入和離開；瀏覽器執行過程沒有 JavaScript page error。
+- 桌機、平板、手機截圖：專案根目錄 `video-assets/screenshots/desktop-large-type.png`、`tablet-large-type.png`、`mobile-large-type.png`。
