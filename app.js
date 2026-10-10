@@ -88,7 +88,7 @@
   }
   function makeToken(item,index,mode=state.mode) {
     const token=document.createElement("span");token.className="sequence-token";token.dataset.index=index;
-    if(mode==="cards") { token.classList.add("card-token"); const icon=document.createElement("span");icon.setAttribute("aria-hidden","true");icon.textContent=item.icon||item.text;const label=document.createElement("small");label.textContent=item.text;label.style.cssText="font-size:10px;font-weight:700;color:#738276;margin-top:-4px";token.append(icon,label);token.setAttribute("aria-label",item.text); }
+    if(mode==="cards") { token.classList.add("card-token"); const picture=document.createElement("img");picture.src=`assets/images/nature-cards/${item.art||"animal"}.webp`;picture.alt="";picture.setAttribute("aria-hidden","true");const label=document.createElement("span");label.className="card-caption";label.textContent=item.text;token.append(picture,label);token.setAttribute("aria-label",item.text); }
     else { token.textContent=mode==="digits"?digitLabels[Number(item)]:item.text; if(mode==="words"||mode==="custom")token.classList.add("word-token");token.setAttribute("aria-label",mode==="digits"?`數字 ${item}`:item.text); }
     return token;
   }
@@ -131,7 +131,7 @@
     for(let i=0;i<count;i++){const slot=document.createElement("div");slot.className="answer-slot";slot.setAttribute("aria-label",`答案第 ${i+1} 格，${state.chosen[i]?itemText(state.chosen[i].item):"空白"}`);if(state.chosen[i]){slot.textContent=state.chosen[i].item.text;slot.classList.add("is-filled");}els.slots.append(slot);}
     els.bank.replaceChildren();
     const options=state.sequence.map((item,index)=>({item,sourceIndex:index,id:`${index}`}));
-    shuffle(options).forEach(option=>{const button=document.createElement("button");button.type="button";button.className="choice-button";if(state.mode==="cards"){button.classList.add("card-choice");button.textContent=option.item.icon||option.item.text;button.setAttribute("aria-label",option.item.text);}else{button.textContent=option.item.text;if(state.mode!=="digits")button.classList.add("word-choice");button.setAttribute("aria-label",option.item.text);}button.dataset.sourceIndex=option.sourceIndex;button.disabled=state.usedIds.has(option.id);button.addEventListener("click",()=>choose(option));els.bank.append(button);});
+    shuffle(options).forEach(option=>{const button=document.createElement("button");button.type="button";button.className="choice-button";if(state.mode==="cards"){button.classList.add("card-choice");const picture=document.createElement("img");picture.src=`assets/images/nature-cards/${option.item.art||"animal"}.webp`;picture.alt="";picture.setAttribute("aria-hidden","true");const label=document.createElement("span");label.className="card-caption";label.textContent=option.item.text;button.append(picture,label);button.setAttribute("aria-label",option.item.text);}else{button.textContent=option.item.text;if(state.mode!=="digits")button.classList.add("word-choice");button.setAttribute("aria-label",option.item.text);}button.dataset.sourceIndex=option.sourceIndex;button.disabled=state.usedIds.has(option.id);button.addEventListener("click",()=>choose(option));els.bank.append(button);});
     els.submit.disabled=false;
   }
   function choose(option) { if(state.chosen.length>=state.sequence.length||state.usedIds.has(String(option.sourceIndex)))return;state.chosen.push(option);state.answerStack.push(option);state.usedIds.add(String(option.sourceIndex));buildAnswerTiles();beep(620,.05); }

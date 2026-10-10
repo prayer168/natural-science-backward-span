@@ -38,3 +38,14 @@ body.projector .topbar,body.projector .intro,body.projector .setup-card,body.pro
 .quick-lengths[hidden]{display:none!important}
 @media(max-width:480px){.quiet-button{font-size:14px}.mode-card b{font-size:17px}.mode-card small{font-size:14px}.how-steps p{font-size:13px}.how-steps b{font-size:14px}.how-steps article{max-width:31%}.answer-actions .secondary-button{font-size:14px}.source-label{font-size:14px}.restart-button,.restart-button span{font-size:14px}footer{font-size:13px}.teacher-note button{font-size:14px}.filter-row label,.settings-row label{font-size:15px}}
 body.projector .topbar{display:flex!important;min-height:64px;height:auto;padding:8px 0;border:0}body.projector .brand{display:none}body.projector .top-actions{margin-left:auto}
+
+/* 生成式自然科圖卡：主圖與可讀文字標籤分層呈現 */
+.sequence-token.card-token{width:clamp(124px,18vw,170px);max-width:calc(50% - 10px);min-width:0;height:auto;min-height:144px;padding:10px;display:flex;flex-direction:column;justify-content:center;gap:7px;border-radius:18px}
+.card-token img,.card-choice img{display:block;object-fit:contain;background:#faf9f3;border-radius:12px;flex:none}
+.card-token img{width:min(100%,122px);height:88px}
+.card-caption{display:block;color:#365b42;font-size:14px;font-weight:750;line-height:1.35;text-align:center;white-space:normal;overflow-wrap:anywhere}
+.choice-button.card-choice{width:calc(25% - 12px);min-width:128px;max-width:190px;min-height:142px;padding:9px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:7px;white-space:normal}
+.card-choice img{width:100%;max-width:112px;height:78px}
+.card-choice .card-caption{font-size:14px}
+@media(max-width:760px){.sequence-token.card-token{width:calc(50% - 8px);max-width:calc(50% - 8px);min-height:128px;padding:8px}.card-token img{width:min(100%,100px);height:68px}.card-caption{font-size:13px}.choice-button.card-choice{width:calc(50% - 8px);min-width:0;max-width:none;min-height:120px;padding:8px}.card-choice img{max-width:92px;height:62px}.card-choice .card-caption{font-size:13px}}
+@media(max-width:390px){.sequence-token.card-token{min-height:116px;gap:5px}.card-token img{height:60px}.card-caption,.card-choice .card-caption{font-size:12px}.choice-button.card-choice{min-height:110px;gap:5px}.card-choice img{height:56px}}
