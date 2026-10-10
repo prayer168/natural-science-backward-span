@@ -24,3 +24,9 @@
 
 - Initial commit `59533b7` pushed to `https://github.com/prayer168/natural-science-backward-span` on `main`.
 - GitHub Pages is not enabled yet.
+
+## 0.2.2 — 2026-10-10
+
+- 新增中英文 Facebook 貼文與中英文單篇／全文一鍵複製頁 `share/facebook-post.html`。
+- 新增 1200×630 社群預覽縮圖，並加入首頁、手冊與分享頁的 Open Graph／Twitter Card metadata。
+- 準備啟用 GitHub Pages，分享頁使用正式公開網址。

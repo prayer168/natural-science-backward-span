@@ -1,4 +1,4 @@
-# 自然倒背挑戰
+﻿# 自然倒背挑戰
 
 適用國小三至六年級自然課的課前專注暖身互動網站。學生依序記住數字、自然詞語或圖卡，再從最後一項開始倒序回答。活動不記名、不排名，也不作智力或診斷評量。
 
@@ -30,11 +30,11 @@
 
 ## GitHub Pages
 
-網站來源位於獨立的 `website/` 資料夾，影片錄製與剪輯資產不在網站目錄內。Repo 英文名預定為 `natural-science-backward-span`。GitHub Pages 部署設定與公開網址將在建立 GitHub Repo 後補上。
+網站來源位於獨立的 `website/` 資料夾，影片錄製與剪輯資產不在網站目錄內。GitHub Repo：<https://github.com/prayer168/natural-science-backward-span>。GitHub Pages 公開網址：<https://prayer168.github.io/natural-science-backward-span/>。中英文 Facebook 分享頁：`share/facebook-post.html`；分享縮圖：`assets/images/og-cover.png`。
 
 ## 版本
 
-目前版本：`0.2.0`。版本紀錄請參閱 `history.md`。
+目前版本：`0.2.2`。版本紀錄請參閱 `history.md`。
 
 ## 使用手冊
 
