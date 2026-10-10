@@ -1,5 +1,7 @@
 # 來源、查核與素材說明
 
+網站：[自然倒背挑戰](https://prayer168.github.io/natural-science-backward-span/)
+
 | 來源 | 使用內容 | 查核日期 | 使用方式／限制 |
 |---|---|---|---|
 | [115 學年度自然課程銜接地圖](https://prayer168.github.io/science-course/) | 康軒、翰林、南一三至六年級學期、單元與活動名稱 | 2026-10-10 | 擷取頁面公開呈現的課程資料；本網站在每題組標示版本，不暗示各版課程完全相同。摘錄存於 `course-map-grades-3-6.md`。 |

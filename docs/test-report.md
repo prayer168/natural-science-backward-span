@@ -1,5 +1,7 @@
 # 測試與建置紀錄
 
+網站：[自然倒背挑戰](https://prayer168.github.io/natural-science-backward-span/)
+
 ## 2026-10-10｜版本 0.2.0 初次實作與瀏覽器驗證
 
 ### 已完成

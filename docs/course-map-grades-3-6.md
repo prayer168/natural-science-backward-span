@@ -1,5 +1,7 @@
 # 國小三至六年級課程地圖摘錄
 
+網站：[自然倒背挑戰](https://prayer168.github.io/natural-science-backward-span/)
+
 來源：115 學年度自然課程銜接地圖，康軒、翰林、南一版本並列。來源網址：https://prayer168.github.io/science-course/ 。擷取日期：2026-10-10。
 
 題目應依選定出版社版本、年級與學期明確標註；此對照表是題庫規劃依據，不代表三版本課程完全相同。
