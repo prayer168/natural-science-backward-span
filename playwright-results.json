@@ -1,0 +1,452 @@
+{
+  "url": "http://localhost:8766",
+  "date": "2026-10-14",
+  "passed": 111,
+  "failed": 0,
+  "results": [
+    {
+      "name": "八關卡、移除自然詞語、六種限時與版權",
+      "status": "PASS"
+    },
+    {
+      "name": "數字 3 個：倒序答案、播放與作答語音",
+      "status": "PASS"
+    },
+    {
+      "name": "數字 4 個：倒序答案、播放與作答語音",
+      "status": "PASS"
+    },
+    {
+      "name": "數字 5 個：倒序答案、播放與作答語音",
+      "status": "PASS"
+    },
+    {
+      "name": "數字 6 個：倒序答案、播放與作答語音",
+      "status": "PASS"
+    },
+    {
+      "name": "數字 7 個：倒序答案、播放與作答語音",
+      "status": "PASS"
+    },
+    {
+      "name": "數字 8 個：倒序答案、播放與作答語音",
+      "status": "PASS"
+    },
+    {
+      "name": "數字 9 個：倒序答案、播放與作答語音",
+      "status": "PASS"
+    },
+    {
+      "name": "數字 10 個：倒序答案、播放與作答語音",
+      "status": "PASS"
+    },
+    {
+      "name": "數字 11 個：倒序答案、播放與作答語音",
+      "status": "PASS"
+    },
+    {
+      "name": "數字 12 個：倒序答案、播放與作答語音",
+      "status": "PASS"
+    },
+    {
+      "name": "數字鍵盤、刪除、清除、提示與實體鍵盤",
+      "status": "PASS"
+    },
+    {
+      "name": "特殊符號 3 個：倒序判定",
+      "status": "PASS"
+    },
+    {
+      "name": "特殊符號 4 個：倒序判定",
+      "status": "PASS"
+    },
+    {
+      "name": "特殊符號 5 個：倒序判定",
+      "status": "PASS"
+    },
+    {
+      "name": "特殊符號 6 個：倒序判定",
+      "status": "PASS"
+    },
+    {
+      "name": "特殊符號 7 個：倒序判定",
+      "status": "PASS"
+    },
+    {
+      "name": "特殊符號 8 個：倒序判定",
+      "status": "PASS"
+    },
+    {
+      "name": "特殊符號 9 個：倒序判定",
+      "status": "PASS"
+    },
+    {
+      "name": "特殊符號 10 個：倒序判定",
+      "status": "PASS"
+    },
+    {
+      "name": "特殊符號 11 個：倒序判定",
+      "status": "PASS"
+    },
+    {
+      "name": "特殊符號 12 個：倒序判定",
+      "status": "PASS"
+    },
+    {
+      "name": "65 種生物圖片：全部載入、無文字與圖卡倒序",
+      "status": "PASS"
+    },
+    {
+      "name": "顏色倒背：形狀提示與倒序",
+      "status": "PASS"
+    },
+    {
+      "name": "方位 4 個：選項與倒序（方位不變）",
+      "status": "PASS"
+    },
+    {
+      "name": "方位 8 個：選項與倒序（方位不變）",
+      "status": "PASS"
+    },
+    {
+      "name": "位置倒背：九宮格與倒序位置",
+      "status": "PASS"
+    },
+    {
+      "name": "真實聲音：八檔解碼、播放與倒序作答",
+      "status": "PASS"
+    },
+    {
+      "name": "音訊作者與授權：單頁說明視窗",
+      "status": "PASS"
+    },
+    {
+      "name": "限時 10 秒：播放不扣時與逾時",
+      "status": "PASS"
+    },
+    {
+      "name": "限時 20 秒：播放不扣時與逾時",
+      "status": "PASS"
+    },
+    {
+      "name": "限時 30 秒：播放不扣時與逾時",
+      "status": "PASS"
+    },
+    {
+      "name": "限時 40 秒：播放不扣時與逾時",
+      "status": "PASS"
+    },
+    {
+      "name": "限時 50 秒：播放不扣時與逾時",
+      "status": "PASS"
+    },
+    {
+      "name": "限時 60 秒：播放不扣時與逾時",
+      "status": "PASS"
+    },
+    {
+      "name": "取消播放、重新開始與同題重播",
+      "status": "PASS"
+    },
+    {
+      "name": "五回合挑戰",
+      "status": "PASS"
+    },
+    {
+      "name": "語音關閉時不發音",
+      "status": "PASS"
+    },
+    {
+      "name": "無瀏覽器程式錯誤",
+      "status": "PASS"
+    },
+    {
+      "name": "RWD digits 320×568：設定、播放、作答、結果",
+      "status": "PASS"
+    },
+    {
+      "name": "RWD digits 360×640：設定、播放、作答、結果",
+      "status": "PASS"
+    },
+    {
+      "name": "RWD digits 390×844：設定、播放、作答、結果",
+      "status": "PASS"
+    },
+    {
+      "name": "RWD digits 768×1024：設定、播放、作答、結果",
+      "status": "PASS"
+    },
+    {
+      "name": "RWD digits 1024×768：設定、播放、作答、結果",
+      "status": "PASS"
+    },
+    {
+      "name": "RWD digits 1920×1080：設定、播放、作答、結果",
+      "status": "PASS"
+    },
+    {
+      "name": "RWD digits 3840×2160：設定、播放、作答、結果",
+      "status": "PASS"
+    },
+    {
+      "name": "RWD digits 667×375：設定、播放、作答、結果",
+      "status": "PASS"
+    },
+    {
+      "name": "RWD digits 844×390：設定、播放、作答、結果",
+      "status": "PASS"
+    },
+    {
+      "name": "RWD symbols 320×568：設定、播放、作答、結果",
+      "status": "PASS"
+    },
+    {
+      "name": "RWD symbols 360×640：設定、播放、作答、結果",
+      "status": "PASS"
+    },
+    {
+      "name": "RWD symbols 390×844：設定、播放、作答、結果",
+      "status": "PASS"
+    },
+    {
+      "name": "RWD symbols 768×1024：設定、播放、作答、結果",
+      "status": "PASS"
+    },
+    {
+      "name": "RWD symbols 1024×768：設定、播放、作答、結果",
+      "status": "PASS"
+    },
+    {
+      "name": "RWD symbols 1920×1080：設定、播放、作答、結果",
+      "status": "PASS"
+    },
+    {
+      "name": "RWD symbols 3840×2160：設定、播放、作答、結果",
+      "status": "PASS"
+    },
+    {
+      "name": "RWD symbols 667×375：設定、播放、作答、結果",
+      "status": "PASS"
+    },
+    {
+      "name": "RWD symbols 844×390：設定、播放、作答、結果",
+      "status": "PASS"
+    },
+    {
+      "name": "RWD cards 320×568：設定、播放、作答、結果",
+      "status": "PASS"
+    },
+    {
+      "name": "RWD cards 360×640：設定、播放、作答、結果",
+      "status": "PASS"
+    },
+    {
+      "name": "RWD cards 390×844：設定、播放、作答、結果",
+      "status": "PASS"
+    },
+    {
+      "name": "RWD cards 768×1024：設定、播放、作答、結果",
+      "status": "PASS"
+    },
+    {
+      "name": "RWD cards 1024×768：設定、播放、作答、結果",
+      "status": "PASS"
+    },
+    {
+      "name": "RWD cards 1920×1080：設定、播放、作答、結果",
+      "status": "PASS"
+    },
+    {
+      "name": "RWD cards 3840×2160：設定、播放、作答、結果",
+      "status": "PASS"
+    },
+    {
+      "name": "RWD cards 667×375：設定、播放、作答、結果",
+      "status": "PASS"
+    },
+    {
+      "name": "RWD cards 844×390：設定、播放、作答、結果",
+      "status": "PASS"
+    },
+    {
+      "name": "RWD custom 320×568：設定、播放、作答、結果",
+      "status": "PASS"
+    },
+    {
+      "name": "RWD custom 360×640：設定、播放、作答、結果",
+      "status": "PASS"
+    },
+    {
+      "name": "RWD custom 390×844：設定、播放、作答、結果",
+      "status": "PASS"
+    },
+    {
+      "name": "RWD custom 768×1024：設定、播放、作答、結果",
+      "status": "PASS"
+    },
+    {
+      "name": "RWD custom 1024×768：設定、播放、作答、結果",
+      "status": "PASS"
+    },
+    {
+      "name": "RWD custom 1920×1080：設定、播放、作答、結果",
+      "status": "PASS"
+    },
+    {
+      "name": "RWD custom 3840×2160：設定、播放、作答、結果",
+      "status": "PASS"
+    },
+    {
+      "name": "RWD custom 667×375：設定、播放、作答、結果",
+      "status": "PASS"
+    },
+    {
+      "name": "RWD custom 844×390：設定、播放、作答、結果",
+      "status": "PASS"
+    },
+    {
+      "name": "RWD colors 320×568：設定、播放、作答、結果",
+      "status": "PASS"
+    },
+    {
+      "name": "RWD colors 360×640：設定、播放、作答、結果",
+      "status": "PASS"
+    },
+    {
+      "name": "RWD colors 390×844：設定、播放、作答、結果",
+      "status": "PASS"
+    },
+    {
+      "name": "RWD colors 768×1024：設定、播放、作答、結果",
+      "status": "PASS"
+    },
+    {
+      "name": "RWD colors 1024×768：設定、播放、作答、結果",
+      "status": "PASS"
+    },
+    {
+      "name": "RWD colors 1920×1080：設定、播放、作答、結果",
+      "status": "PASS"
+    },
+    {
+      "name": "RWD colors 3840×2160：設定、播放、作答、結果",
+      "status": "PASS"
+    },
+    {
+      "name": "RWD colors 667×375：設定、播放、作答、結果",
+      "status": "PASS"
+    },
+    {
+      "name": "RWD colors 844×390：設定、播放、作答、結果",
+      "status": "PASS"
+    },
+    {
+      "name": "RWD bearings 320×568：設定、播放、作答、結果",
+      "status": "PASS"
+    },
+    {
+      "name": "RWD bearings 360×640：設定、播放、作答、結果",
+      "status": "PASS"
+    },
+    {
+      "name": "RWD bearings 390×844：設定、播放、作答、結果",
+      "status": "PASS"
+    },
+    {
+      "name": "RWD bearings 768×1024：設定、播放、作答、結果",
+      "status": "PASS"
+    },
+    {
+      "name": "RWD bearings 1024×768：設定、播放、作答、結果",
+      "status": "PASS"
+    },
+    {
+      "name": "RWD bearings 1920×1080：設定、播放、作答、結果",
+      "status": "PASS"
+    },
+    {
+      "name": "RWD bearings 3840×2160：設定、播放、作答、結果",
+      "status": "PASS"
+    },
+    {
+      "name": "RWD bearings 667×375：設定、播放、作答、結果",
+      "status": "PASS"
+    },
+    {
+      "name": "RWD bearings 844×390：設定、播放、作答、結果",
+      "status": "PASS"
+    },
+    {
+      "name": "RWD sounds 320×568：設定、播放、作答、結果",
+      "status": "PASS"
+    },
+    {
+      "name": "RWD sounds 360×640：設定、播放、作答、結果",
+      "status": "PASS"
+    },
+    {
+      "name": "RWD sounds 390×844：設定、播放、作答、結果",
+      "status": "PASS"
+    },
+    {
+      "name": "RWD sounds 768×1024：設定、播放、作答、結果",
+      "status": "PASS"
+    },
+    {
+      "name": "RWD sounds 1024×768：設定、播放、作答、結果",
+      "status": "PASS"
+    },
+    {
+      "name": "RWD sounds 1920×1080：設定、播放、作答、結果",
+      "status": "PASS"
+    },
+    {
+      "name": "RWD sounds 3840×2160：設定、播放、作答、結果",
+      "status": "PASS"
+    },
+    {
+      "name": "RWD sounds 667×375：設定、播放、作答、結果",
+      "status": "PASS"
+    },
+    {
+      "name": "RWD sounds 844×390：設定、播放、作答、結果",
+      "status": "PASS"
+    },
+    {
+      "name": "RWD positions 320×568：設定、播放、作答、結果",
+      "status": "PASS"
+    },
+    {
+      "name": "RWD positions 360×640：設定、播放、作答、結果",
+      "status": "PASS"
+    },
+    {
+      "name": "RWD positions 390×844：設定、播放、作答、結果",
+      "status": "PASS"
+    },
+    {
+      "name": "RWD positions 768×1024：設定、播放、作答、結果",
+      "status": "PASS"
+    },
+    {
+      "name": "RWD positions 1024×768：設定、播放、作答、結果",
+      "status": "PASS"
+    },
+    {
+      "name": "RWD positions 1920×1080：設定、播放、作答、結果",
+      "status": "PASS"
+    },
+    {
+      "name": "RWD positions 3840×2160：設定、播放、作答、結果",
+      "status": "PASS"
+    },
+    {
+      "name": "RWD positions 667×375：設定、播放、作答、結果",
+      "status": "PASS"
+    },
+    {
+      "name": "RWD positions 844×390：設定、播放、作答、結果",
+      "status": "PASS"
+    }
+  ]
+}
